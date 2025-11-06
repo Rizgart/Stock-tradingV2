@@ -67,6 +67,17 @@ npm install
 npm run electron-dev
 ```
 
+## Nästa steg
+
+- Backend-MVP enligt [`docs/backend_architecture.md`](docs/backend_architecture.md) (FastAPI, caching, analysmotor).
+- Utöka analysmotorn med sektorjämförelser, fundamentala modeller och backtesting enligt [`docs/analysis_engine_design.md`](docs/analysis_engine_design.md).
+- Bygg ut frontend enligt [`docs/frontend_features_plan.md`](docs/frontend_features_plan.md) (dashboard, portfolio, alerts, export).
+- Etablera säkerhets- och dataskyddsrutiner enligt [`docs/security_data_plan.md`](docs/security_data_plan.md).
+- Implementera test- och kvalitetsstrategi enligt [`docs/testing_quality_plan.md`](docs/testing_quality_plan.md).
+- Följ distributions- och roadmap-planen enligt [`docs/distribution_roadmap_plan.md`](docs/distribution_roadmap_plan.md).
+- Implementera notifieringar (desktop push/e-post), portföljimport och rapportexport.
+- Förbered CI/CD-pipeline med enhetstester, E2E och byggsteg för Windows/macOS distributabler.
+
 ## Testning och kvalitet
 
 - Minst 80 % testtäckning för kritisk logik i analysmotorn.

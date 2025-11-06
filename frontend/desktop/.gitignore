@@ -12,8 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Generated platform assets
-src-tauri/icons/
+# Electron artefakter
+dist-electron
+release/
 
 # Editor directories and files
 .vscode/*
