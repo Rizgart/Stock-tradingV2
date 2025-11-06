@@ -33,6 +33,7 @@ frontend/desktop
 ## Nästa steg
 1. Initiera Electron + React-projekt, t.ex. via `npx create-electron-app@latest` eller Vite-baserad mall (`npm create @quick-start/electron`).
 2. Lägg till delade renderer-/main-skript i `package.json` (t.ex. `npm run electron-dev` som startar både Vite och Electron main-processen via `concurrently`).
+2. Lägg till delade renderer-/main-skript i `package.json` (t.ex. `npm run electron-dev` som startar både Electron main och Vite dev-server).
 3. Sätt upp internationellisering och theming.
 4. Implementera dashboard med realtidskort och rekommendationslista.
 5. Koppla RTK Query mot backend-API:t.
