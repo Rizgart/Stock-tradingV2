@@ -52,7 +52,7 @@ Detta dokument sammanfattar funktions- och produktkraven för AktieTipset basera
 - GDPR-efterlevnad, MiFID-disclaimer.
 
 ## Arkitektur
-- **Frontend desktop:** React + Tauri (TypeScript).
+- **Frontend desktop:** Electron (React + TypeScript).
 - **Mobil:** React Native (TypeScript) – delar komponenter.
 - **Backend API:** FastAPI (Python).
 - **Analysmotor:** Python (FastAPI/gRPC), libs `pandas`, `numpy`, `scikit-learn`.
