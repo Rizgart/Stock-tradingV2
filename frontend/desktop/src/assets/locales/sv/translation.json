@@ -1,0 +1,7 @@
+{
+  "app": {
+    "title": "Aktiehandel (Desktop)",
+    "welcome": "Välkommen till handelsarbetsstationen",
+    "placeholder": "Bygg vidare på strukturen i src/features för att skapa dina dashboards."
+  }
+}
