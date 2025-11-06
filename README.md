@@ -1,10 +1,10 @@
 # AktieTipset
 
-AktieTipset är en desktop-applikation byggd med React och Tauri som hjälper användare att upptäcka och bevaka aktier. Projektet kombinerar en modulär Python-backend (FastAPI) med en analysmotor som räknar fram köp- och säljsignaler baserade på både tekniska och fundamentala indikatorer.
+AktieTipset är en desktop-applikation byggd med Electron (JavaScript/TypeScript + React) som hjälper användare att upptäcka och bevaka aktier. Projektet kombinerar en modulär Python-backend (FastAPI) med en analysmotor som räknar fram köp- och säljsignaler baserade på både tekniska och fundamentala indikatorer.
 
 ## Översikt
 
-- **Desktop**: Tauri + React, målplattformar macOS (Intel/Apple Silicon) och Windows 10/11.
+- **Desktop**: Electron (React), målplattformar macOS (Intel/Apple Silicon) och Windows 10/11.
 - **Backend**: FastAPI (Python) med mikrotjänst-arkitektur.
 - **Analysmotor**: Python-baserad modul som nyttjar `pandas`, `numpy` och `scikit-learn`.
 - **Data**: Integration mot Massive API som primär datakälla med stöd för fler källor.
@@ -27,7 +27,7 @@ Kompletta krav och arkitektur beskrivs i [`docs/product_spec.md`](docs/product_s
 ├── backend/             # FastAPI-backend och tjänster
 ├── analysis_engine/     # Analys- och rankinglogik
 ├── data_integration/    # Adaptrar mot externa datakällor
-├── frontend/            # Desktop-klient (React + Tauri)
+├── frontend/            # Desktop-klient (Electron + React)
 ├── docs/                # Krav, arkitektur och design
 └── README.md
 ```
@@ -38,7 +38,6 @@ Kompletta krav och arkitektur beskrivs i [`docs/product_spec.md`](docs/product_s
 
 - Python 3.11+
 - Node.js 18+
-- Rust toolchain (för Tauri)
 
 ### Backend
 
@@ -65,7 +64,7 @@ pytest
 ```bash
 cd frontend/desktop
 npm install
-npm run tauri dev
+npm run electron-dev
 ```
 
 ## Testning och kvalitet

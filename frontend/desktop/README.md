@@ -1,11 +1,11 @@
 # Frontend (Desktop)
 
-Desktop-klienten byggs med React + Tauri för att leverera en snabb och native-lik upplevelse.
+Desktop-klienten byggs med Electron (JavaScript/TypeScript + React) för att leverera en snabb och native-lik upplevelse.
 
 ## Tech stack
+- Electron (main/preload) med TypeScript
 - React 18 med TypeScript
-- Vite för bundling
-- Tauri 2.0
+- Vite för renderer-bundling
 - Redux Toolkit + RTK Query för state och data
 - Mantine/Chakra UI för komponenter och tema
 - i18next för sv/en-översättningar
@@ -30,9 +30,10 @@ frontend/desktop
 - Tillgänglighet via aria-attribut och tangentbordsnavigering.
 
 ## Nästa steg
-1. Initiera Tauri + React-projekt (`npm create tauri-app@latest`).
-2. Sätt upp internationellisering och theming.
-3. Implementera dashboard med realtidskort och rekommendationslista.
-4. Koppla RTK Query mot backend-API:t.
+1. Initiera Electron + React-projekt, t.ex. via `npx create-electron-app@latest` eller Vite-baserad mall (`npm create @quick-start/electron`).
+2. Lägg till delade renderer-/main-skript i `package.json` (t.ex. `npm run electron-dev` som startar både Electron main och Vite dev-server).
+3. Sätt upp internationellisering och theming.
+4. Implementera dashboard med realtidskort och rekommendationslista.
+5. Koppla RTK Query mot backend-API:t.
 
-> **Obs!** Plattformsspecifika ikoner ignoreras i repo:t. Generera egna lokalt via `npx @tauri-apps/cli icon <ikon.svg>` innan paketering.
+> **Obs!** Plattformsspecifika ikoner ignoreras i repo:t. Generera egna lokalt och konfigurera `electron-builder` innan paketering.
