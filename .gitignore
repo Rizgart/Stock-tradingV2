@@ -14,8 +14,9 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Rust / Tauri
+# Desktop build artefakter
 src-tauri/target/
+dist-electron/
 
 # Editors
 .idea/

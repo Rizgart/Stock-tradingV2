@@ -6,14 +6,14 @@ Detta dokument beskriver arkitektur, moduler och teknikval för AktieTipset.
 
 AktieTipset följer en modulär mikrotjänst-arkitektur:
 
-- **Frontend (desktop)** – React + Tauri. Renderar UI och interagerar med lokala resurser (Keychain/DPAPI, filsystem). Kommunicerar med backend via REST/gRPC.
+- **Frontend (desktop)** – Electron + React. Renderar UI och interagerar med lokala resurser (Keychain/DPAPI, filsystem). Kommunicerar med backend via REST/gRPC.
 - **Backend API** – FastAPI som exponerar REST-endpoints för autentisering, datakonsumtion, notifieringar och administration.
 - **Analysmotor** – Fristående Python-tjänst som kör teknisk/fundamental analys, ranking och backtesting.
 - **Data Integration Layer** – Adapterlager mot externa marknadsdatakällor (Massive API m.fl.) med caching och rate-limit-hantering.
 - **Data Store** – Lokal SQLite-cache + moln-PostgreSQL för persistens, historik och användarsynk.
 
 ```
-Frontend (Tauri) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
+Frontend (Electron) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
                              |
                              +--> Data Integration (Massive API, Nordnet, ...)
                              |
@@ -22,11 +22,11 @@ Frontend (Tauri) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
 
 ## Modulbeskrivning
 
-### Frontend – Desktop (React + Tauri)
+### Frontend – Desktop (Electron + React)
 - **State Management:** Redux Toolkit + RTK Query för datafetching.
 - **UI-kit:** Mantine eller Chakra UI med stöd för mörkt/kontrastläge.
 - **Internationalisering:** `react-i18next` med sv/en-översättningar.
-- **Notiser:** Electron/Tauri notification API + e-post via backend.
+- **Notiser:** Electron Notifications API + e-post via backend.
 - **Nyckelvy**: Dashboard, rekommendationer, aktiedetaljer, watchlist/portfölj, inställningar.
 
 ### Backend API (FastAPI)
@@ -77,8 +77,8 @@ Frontend (Tauri) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
 - **Miljöer:** Dev, Beta, Prod. Feature toggles med LaunchDarkly eller eget system.
 - **CI/CD:** GitHub Actions med pipelines för lint, test, build (frontend/backend), backtesting regression.
 - **Paketering:**
-  - macOS: Notarized DMG via Tauri bundler.
-  - Windows: MSIX/EXE med signerade builds.
+  - macOS: Notarized DMG via Electron Builder.
+  - Windows: MSIX/EXE via Electron Builder med signerade builds.
 - **Monitoring:** Prometheus/Grafana för backend och analysmotor, Sentry för frontend.
 
 ## Skalning & framtida expansion
@@ -91,7 +91,7 @@ Frontend (Tauri) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
 
 | Lager | Teknologier |
 | ----- | ----------- |
-| Frontend | React, Tauri, TypeScript, Redux Toolkit, Mantine/Chakra, i18next |
+| Frontend | React, Electron, TypeScript, Redux Toolkit, Mantine/Chakra, i18next |
 | Backend | FastAPI, SQLModel, Celery/APScheduler, Redis, PostgreSQL |
 | Analys | pandas, numpy, scikit-learn, statsmodels |
 | DevOps | GitHub Actions, Docker, Kubernetes, Sentry, Prometheus |
