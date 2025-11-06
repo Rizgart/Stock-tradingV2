@@ -1,0 +1,7 @@
+{
+  "app": {
+    "title": "Stock Trading Desktop",
+    "welcome": "Welcome to the trading workstation",
+    "placeholder": "Start wiring features in src/features to build your dashboards."
+  }
+}

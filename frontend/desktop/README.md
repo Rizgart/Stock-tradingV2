@@ -34,3 +34,5 @@ frontend/desktop
 2. Sätt upp internationellisering och theming.
 3. Implementera dashboard med realtidskort och rekommendationslista.
 4. Koppla RTK Query mot backend-API:t.
+
+> **Obs!** Plattformsspecifika ikoner ignoreras i repo:t. Generera egna lokalt via `npx @tauri-apps/cli icon <ikon.svg>` innan paketering.
