@@ -6,7 +6,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends
 
-from ...analysis_client import AnalysisClient, get_analysis_client
+from ..analysis_client import AnalysisClient, get_analysis_client
 
 router = APIRouter(prefix="/recommendations", tags=["recommendations"])
 
