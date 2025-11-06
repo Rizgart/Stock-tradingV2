@@ -55,7 +55,7 @@ Detta dokument sammanfattar funktions- och produktkraven för AktieTipset basera
 - **Frontend desktop:** React + Tauri (TypeScript).
 - **Mobil:** React Native (TypeScript) – delar komponenter.
 - **Backend API:** FastAPI (Python).
-- **Analysmotor:** Python (FastAPI/gRPC), libs `pandas`, `numpy`, `scikit-learn`, `ta-lib`.
+- **Analysmotor:** Python (FastAPI/gRPC), libs `pandas`, `numpy`, `scikit-learn`.
 - **Databaser:** Lokal SQLite (cache), fjärr PostgreSQL.
 - **Kommunikation:** REST eller gRPC mellan backend och analys.
 - **Arkitekturmönster:** Modulär mikrotjänst-arkitektur.

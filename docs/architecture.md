@@ -93,7 +93,7 @@ Frontend (Tauri) <-> Backend API (FastAPI) <-> Analysis Engine (FastAPI/gRPC)
 | ----- | ----------- |
 | Frontend | React, Tauri, TypeScript, Redux Toolkit, Mantine/Chakra, i18next |
 | Backend | FastAPI, SQLModel, Celery/APScheduler, Redis, PostgreSQL |
-| Analys | pandas, numpy, scikit-learn, ta-lib, statsmodels |
+| Analys | pandas, numpy, scikit-learn, statsmodels |
 | DevOps | GitHub Actions, Docker, Kubernetes, Sentry, Prometheus |
 
 ## Öppna frågor

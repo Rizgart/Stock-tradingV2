@@ -6,7 +6,7 @@ AktieTipset är en desktop-applikation byggd med React och Tauri som hjälper an
 
 - **Desktop**: Tauri + React, målplattformar macOS (Intel/Apple Silicon) och Windows 10/11.
 - **Backend**: FastAPI (Python) med mikrotjänst-arkitektur.
-- **Analysmotor**: Python-baserad modul som nyttjar `pandas`, `numpy`, `scikit-learn` och `ta-lib`.
+- **Analysmotor**: Python-baserad modul som nyttjar `pandas`, `numpy` och `scikit-learn`.
 - **Data**: Integration mot Massive API som primär datakälla med stöd för fler källor.
 - **Språkstöd**: Svenska och engelska.
 
